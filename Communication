@@ -1,0 +1,13 @@
+from twilio.rest import Client
+
+account_sid = 'ACc813faa28379cad4c976a444326813d7'
+auth_token = 'e3e164e470c4f2e17d704a658748d5ac'
+client = Client(account_sid, auth_token)
+
+message = client.messages.create(
+  from_='+16203018552',
+  body='..."FIRE ALERT"...',
+  to='+918754226184'
+)
+
+print(message.sid)
